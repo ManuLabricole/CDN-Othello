@@ -16,17 +16,17 @@ class Board :
         x = 0
         y = 0
         for jeu in range(64):
-            case.position = (x+1,y)
-            self.ListeCase.append(case)
+            case().position = (x+1,y)
+            self.ListeCase.append()
             x+=1
             if x > 8 :
                 x=0
                 y+=1
-                case.position = (x,y)
-                self.ListeCase.append(case)
+                case().position = (x,y)
+                self.ListeCase.append(case())
                 x+=1
 
-        return ListeCase
+        return self.ListeCase
 
 
     def get_case_jouable (self):
@@ -39,3 +39,6 @@ class Board :
     def set_case_jouable (self) :
         return self.get_case_jouable
 
+    def display_game (self) :
+        game = np.array(self.ListeCase)
+        return game 
