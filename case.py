@@ -17,6 +17,7 @@ class Case:
             return "F"
         else:
             return "X"
+        
     # La function addPion doit recevoir en input un OBJET de class Pion    
     def addPion(self, pion):
         self.isFree = False
