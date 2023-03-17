@@ -1,7 +1,12 @@
 from case import Case
+#from board import Board
 
 
 class Game:
     
     def __init__(self):
-        git p
+        self.initGame()
+        
+    
+    def initGame(self):
+        
