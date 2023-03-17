@@ -10,8 +10,14 @@ class Game:
         self.gameOn = True
         
     def initGame(self):
-        self.board = Board()
-        print("game init")       
+        self.board = Board()  
+        
+    def printGame(self):
+        
+        
+        ligne1 = [el for el in self.board.listeCase if el.position[0] == 1]
+        print(ligne1)
+        
 
 
 game = Game()
