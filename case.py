@@ -4,12 +4,24 @@ class Case:
         self.position = position
         self.isPlayable = False
         self.isFree = True
+        self.Pion = None
+        self.initFirstFour()
+        
 
     def __str__(self):
         if self.isFree:
             return "F"
-        else:
-            return
 
     def __repr__(self) -> str:
-        return f"{self.position}"
+        if self.isFree:
+            return "F"
+        else:
+            return "X"
+    # La function addPion doit recevoir en input un OBJET de class Pion    
+    def addPion(self, pion):
+        self.isFree = False
+        self.pion = pion
+        
+    def initFirstFour(self):
+        if int(self.position[0]) == 5:
+            print(self.position[0])

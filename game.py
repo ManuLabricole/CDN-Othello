@@ -10,10 +10,9 @@ class Game:
         self.gameOn = True
         
     def initGame(self):
-        self.board = Board()
-        print("game init")       
+        self.board = Board()  
 
 
 game = Game()
 #print(game.board.listeCase)
-game.board.display_game()
+print(len(game.board.listeCase))
