@@ -8,9 +8,10 @@ class Game:
         self.initGame()
         self.gameOn = True
         
-    
     def initGame(self):
         board = Board()
         print("game init")
         
+
+
 Game()

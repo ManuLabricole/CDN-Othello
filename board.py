@@ -8,8 +8,8 @@ import numpy as np
 class Board:
 
     def __init__(self):
-        ListeCase = list()
-        ListCaseJouable = list()
+        self.ListeCase = list()
+        self.ListCaseJouable = list()
         self.set_case_jouable()
         self.initCase()
 
