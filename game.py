@@ -15,5 +15,5 @@ class Game:
 
 
 game = Game()
-#print(game.board.listeCase)
-game.board.display_game()
+print(game.board.listeCase)
+#game.board.display_game()

@@ -2,7 +2,7 @@ from case import Case
 #from pion import pion
 #from joueur import joueur
 #from game import game
-import numpy as np
+#import numpy as np
 
 
 class Board:
@@ -31,4 +31,4 @@ class Board:
 
     def display_game(self):
         game = np.array(self.listeCase)
-        return game
+        return print(game)
