@@ -16,6 +16,7 @@ class Case:
         if self.isFree:
             return "F"
         else:
+            self.pion.couleur
             return "X"
         
     # La function addPion doit recevoir en input un OBJET de class Pion    
@@ -26,3 +27,4 @@ class Case:
     def initFirstFour(self):
         if int(self.position[0]) == 5:
             print(self.position[0])
+            
