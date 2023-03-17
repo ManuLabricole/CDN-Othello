@@ -2,6 +2,7 @@ from case import case
 from pion import pion
 from joueur import joueur
 from game import game
+import numpy as np
 
 class Board :
 
