@@ -5,13 +5,15 @@ from board import Board
 class Game:
     
     def __init__(self):
+        self.board = None
         self.initGame()
         self.gameOn = True
         
     def initGame(self):
-        board = Board()
-        print("game init")
-        
+        self.board = Board()
+        print("game init")       
 
 
-Game()
+game = Game()
+#print(game.board.listeCase)
+game.board.display_game()
