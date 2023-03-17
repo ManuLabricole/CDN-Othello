@@ -1,7 +1,6 @@
 class Case:
 
-
-    def __init(self, position, isPlayable, isFree) -> None:
+    def __init__(self, position, isPlayable, isFree) -> None:
         self.position = position
         self.isPlayable = False
         self.isFree = True
@@ -11,3 +10,6 @@ class Case:
             return "F"
         else:
             return
+    
+    def __repr__(self) -> str:
+        return f"{self.position}"
