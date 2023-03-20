@@ -29,7 +29,7 @@ class Game:
                     if case.isFree:
                         print("Valid choice")
                     else:
-                        print("case is not free")  
+                        print("case is not free : ")  
                         return False
                 else:
                     print("It seems that the index given are out of range")
@@ -40,15 +40,19 @@ class Game:
         elif (len(choice)> 2):
             print("To many numbers, Please insert a valid input :")
             return False
-    
-
-    def turn(self):
+        
+    def getChoice(self):
         positionPlayed = input("Enter the 2 digits corresponding to the coordinate of your choice :")
         isValid = self.validateChoice(positionPlayed)
         while isValid == False:
             positionPlayed = input("Please; insert valid inputs")
             isValid = self.validateChoice(positionPlayed)
         print("Turn finished !! ")
+    
+
+    def turn(self):
+        choice = self.getChoice()
+
     
 
     def checkAfterTurn(self):
