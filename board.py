@@ -45,7 +45,7 @@ class Board:
     def get_case_jouable(self):
         listCaseJouable = list()
         for case in self.listeCase:
-            if case.is_jouable():
+            if case.isPlayable():
                 listCaseJouable.append(case)
         return listCaseJouable
 
@@ -59,6 +59,7 @@ class Board:
             print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-"))
             for b in range((8//8)):
                  print(f"| {liste[c]}   | {liste[c+1]}   | {liste[c+2]}   | {liste[c+3]}   | {liste[c+4]}   | {liste[c+5]}   | {liste[c+6]}   | {liste[c+7]}  |" )
+                 #pour itérer à travers les 64 cases
                  c+=1
 
 
