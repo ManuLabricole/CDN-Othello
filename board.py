@@ -46,7 +46,7 @@ class Board:
     def get_case_jouable(self):
         listCaseJouable = list()
         for case in self.listeCase:
-            if case.is_jouable():
+            if case.isPlayable():
                 listCaseJouable.append(case)
         return listCaseJouable
 
