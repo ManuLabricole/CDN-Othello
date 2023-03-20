@@ -41,24 +41,26 @@ class Game:
                 return False
         elif (len(choice)> 2):
             print("To many numbers, Please insert a valid input :")
+        elif (len(choice)< 2) :
+            print("Please insert two numbers : ")
             return False
         
     def getChoice(self):
         positionPlayed = input("Enter the 2 digits corresponding to the coordinate of your choice : ")
         isValid = self.validateChoice(positionPlayed)
         while isValid == False:
-            positionPlayed = input("Please; insert valid inputs")
+            positionPlayed = input("Please; insert valid inputs : ")
             isValid = self.validateChoice(positionPlayed)
         print("Turn finished !! ")
     
 
     def turn(self):
-
         choice = self.getChoice()
 
     def getPlayers(self):
-        joueur_1 = Joueur(input("Hi Player 1, what is your name ? "), input("pick a color (black or white): "))
-        Joueur_2 = Joueur(input("Hi Player 2, what is your name ? "), input("pick a color (black or white): "))    
+        joueur_1 = Joueur(input("Hi player 1 what is your name ? : "), input("black or white ? : ") )
+        joueur_2 = Joueur(input("Hi player 2 what is your name ? : "), input("black or white ? : ") )
+        return joueur_1, joueur_2    
 
     def checkAfterTurn(self):
         pass
