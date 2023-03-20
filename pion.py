@@ -1,8 +1,9 @@
+from joueur import Joueur
 
 class Pion:
 
     def __init__(self, couleur):  # , coordonnee):
-
+        couleur = Joueur.couleur
         if couleur in ["black", "white"]:
             self.couleur = couleur
         else:

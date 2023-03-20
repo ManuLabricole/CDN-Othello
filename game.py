@@ -1,7 +1,7 @@
 from case import Case
 from board import Board
 from pion import Pion
-
+from joueur import Joueur
 
 class Game:
 
@@ -9,6 +9,8 @@ class Game:
         self.board = None
         self.initGame()
         self.gameOn = True
+        self.getPlayers()
+
 
     def initGame(self):
         self.board = Board()
@@ -29,7 +31,7 @@ class Game:
                     if case.isFree:
                         print("Valid choice")
                     else:
-                        print("case is not free")  
+                        print("case is not free : ")  
                         return False
                 else:
                     print("It seems that the index given are out of range")
@@ -40,10 +42,9 @@ class Game:
         elif (len(choice)> 2):
             print("To many numbers, Please insert a valid input :")
             return False
-    
-
-    def turn(self):
-        positionPlayed = input("Enter the 2 digits corresponding to the coordinate of your choice :")
+        
+    def getChoice(self):
+        positionPlayed = input("Enter the 2 digits corresponding to the coordinate of your choice : ")
         isValid = self.validateChoice(positionPlayed)
         while isValid == False:
             positionPlayed = input("Please; insert valid inputs")
@@ -51,16 +52,14 @@ class Game:
         print("Turn finished !! ")
     
 
+    def turn(self):
+
+        choice = self.getChoice()
+
+    def getPlayers(self):
+        joueur_1 = Joueur(input("Hi Player 1, what is your name ? "), input("pick a color (black or white): "))
+        Joueur_2 = Joueur(input("Hi Player 2, what is your name ? "), input("pick a color (black or white): "))    
+
     def checkAfterTurn(self):
         pass
-
-
-game = Game()
-#game.board.getCase((4, 4)).isFree = False
-#game.turn()
-#case = game.board.getCase((4,4))
-# case.addPion(Pion("black"))
-# print(case.pion)
-game.board.display_game()
-game.turn()
 

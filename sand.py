@@ -1,15 +1,13 @@
-from turtle import position
-from case import Case
 
-caseList = list()
-def initCase():
-    for i in range(8):
-        for j in range(8):
-            caseList.append(Case(position=(i,j), isFree=True, isPlayable=False))
+from game import Game
 
-initCase()
-for i in caseList:
-    print(i)
+game = Game()
+#game.board.getCase((4, 4)).isFree = False
+#game.turn()
+#case = game.board.getCase((4,4))
+# case.addPion(Pion("black"))
+# print(case.pion)
+game.board.display_game()
 
-print(caseList)
+game.turn()
 
