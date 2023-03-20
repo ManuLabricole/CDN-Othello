@@ -6,9 +6,14 @@ class Pion:
         if couleur in ["black", "white"]:
             self.couleur = couleur
         else: 
-            raise ValueError("message")
+            raise ValueError("Try again : Les jetons sont soit blancs, soit noirs")
 
-        self.coordonnee = coordonnee
+        if isinstance(coordonnee, tuple):
+            self.coordonnee = coordonnee
+        else: 
+            raise ValueError("Try again : Merci d'indiquer les coordonnes sous le format suivant (x,y)")
+        
+
     
         
     def __str__(self):
@@ -16,5 +21,11 @@ class Pion:
             return "X"
         elif self.couleur == "white":
             return "O"
+    
+    def flip(self):
+        if couleur == "black":
+            couleur == "white"
+        else:
+            couleur == "black"
         
         
