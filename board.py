@@ -38,6 +38,8 @@ class Board:
         for el in self.listeCase:
             if el.isInPosition(position) == True:
                 return el
+        
+        return None
 
     def get_case_jouable(self):
         listCaseJouable = list()
