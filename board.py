@@ -77,6 +77,19 @@ class Board:
 
     def set_case_jouable(self):
         return self.get_case_jouable
+    
+    def getScore (self) :
+        black_counter = 0
+        white_counter = 0
+        for l in self.listeCase :
+            if l.isFree == False :
+                if l.pion.couleur == "black":
+                    black_counter +=1
+                else :
+                    white_counter +=1
+        return f'black score = {black_counter} white score = {white_counter}'
+
+
 
     def display_game(self):
         c = 0
