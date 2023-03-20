@@ -1,6 +1,6 @@
 from board import Board
 board = Board()
-#liste = board.listeCase
+liste = board.listeCase
 
 
 #def print_grid(area, unit, liste):
@@ -15,11 +15,13 @@ board = Board()
 #print(liste)
 
 def ligne (longueur, largeur) :
+    c = 0
     for c in range (longueur) :
             print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-"))
-            for b in range((largeur//4)):
-                 print("|" + "case1" +"|" + 'case2'+"|" + 'case3'+"|" + 'case4'+"|" + 'case5'+"|" + 'case6'+"|" + 'case7'+"|" + 'case8'+"|" )
+            for b in range((largeur//8)):
+                 print(f"| {liste[c]}   | {liste[c+1]}   | {liste[c+2]}   | {liste[c+3]}   | {liste[c+4]}   | {liste[c+5]}   | {liste[c+6]}   | {liste[c+7]}  |" )
+                 c+=1
 
 
 ligne(8,8)
-bl
+liste[0]
