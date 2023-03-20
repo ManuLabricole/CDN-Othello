@@ -53,4 +53,12 @@ class Board:
         return self.get_case_jouable
 
     def display_game(self):
-        print(self.listeCase)
+        for c in range (8) :
+            print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-"))
+            for b in range((largeur//4)):
+                print("|" + "case1" +"|" + 'case2'+"|" + 'case3'+"|" + 'case4'+"|" + 'case5'+"|" + 'case6'+"|" + 'case7'+"|" + 'case8'+"|" )
+
+        
+        
+        game = np.array(self.listeCase)
+        return print(game)
