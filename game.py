@@ -16,8 +16,25 @@ class Game:
     def checkBeforeTurn(self):
         pass
     
+    def validateChoice(self, choice):
+        if len(choice) == 2:
+            try:
+                x = int(choice[0])
+                y = int(choice[1])
+                
+            except:
+                print("Input not a numbers, please insert digits")
+        elif (len(choice)> 2):
+            print("To many numbers, Please insert a valid input :")
+            return False
+    
 
     def turn(self):
+        positionPlayed = input("Enter the 2 digits corresponding to the coordinate of your choice :")
+        isValid = self.validateChoice(positionPlayed)
+        while isValid == False:
+            positionPlayed = input()
+            isValid = self.validateChoice(positionPlayed)
         
         isJouable = True
         firstChoicePosition = (4, 4)
@@ -44,3 +61,5 @@ game = Game()
 # case.addPion(Pion("black"))
 # print(case.pion)
 game.board.display_game()
+game.turn()
+

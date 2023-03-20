@@ -39,10 +39,6 @@ class Board:
             if el.isInPosition(position) == True:
                 return el
 
-    def getChoice():
-        # Input from joueur
-        pass
-
     def get_case_jouable(self):
         listCaseJouable = list()
         for case in self.listeCase:
@@ -65,6 +61,3 @@ class Board:
         
         
         print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "+"))
-
-        #game = np.array(self.listeCase)
-        print(liste)
