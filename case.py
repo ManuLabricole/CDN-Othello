@@ -5,7 +5,6 @@ class Case:
         self.isPlayable = False
         self.isFree = True
         self.pion = None
-        self.initFirstFour()
 
     def __str__(self):
         if self.isFree:
@@ -18,9 +17,12 @@ class Case:
 
     def __repr__(self) -> str:
         if self.isFree:
-            return "F"
+            return " "
         else:
-            return self.pion
+            if self.pion.couleur == "black":
+                return "X"
+            else:
+                return "O"
 
     # La function addPion doit recevoir en input un OBJET de class Pion
     def addPion(self, pion):
@@ -34,13 +36,3 @@ class Case:
             return True
         else:
             return False
-
-    def getCase(self, position):
-        if position == self.position:
-            return self
-        else:
-            print("case doesn t exist")
-
-    def initFirstFour(self):
-        if int(self.position[0]) == 5:
-            print(self.position[0])
