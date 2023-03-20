@@ -27,6 +27,7 @@ class Board:
 
         for i in range(4):
             case = self.getCase(positionCase[i])
+            
             case.addPion(Pion(colorPion[i]))
             print(case)
 
@@ -55,13 +56,10 @@ class Board:
         c = 0
         liste = self.listeCase
         #J'ai remis range 8 pour pouvoir énumérer les lignes déso
+        print (f"    0   1   2   3   4   5   6   7 ")
         for a in range (8) :
             
-            print (f"{a} +---+---+---+---+---+---+---+---")
-            print(f"  | {liste[c]} | {liste[c+1]} | {liste[c+2]} | {liste[c+3]} | {liste[c+4]} | {liste[c+5]} | {liste[c+6]} | {liste[c+7]} |" )
+            print (f"  +---+---+---+---+---+---+---+---")
+            print(f"{a} | {liste[c]} | {liste[c+1]} | {liste[c+2]} | {liste[c+3]} | {liste[c+4]} | {liste[c+5]} | {liste[c+6]} | {liste[c+7]} |" )
                  #pour itérer à travers les 64 cases
             c+=8
-
-
-        game = np.array(self.listeCase)
-        return print(game)
