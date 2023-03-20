@@ -9,7 +9,7 @@ class Game:
         self.board = None
         self.initGame()
         self.gameOn = True
-        self.getPlayers()
+        #self.getPlayers()
 
 
     def initGame(self):
