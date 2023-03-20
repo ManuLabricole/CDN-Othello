@@ -55,12 +55,12 @@ class Board:
     def display_game(self):
         c = 0
         liste = self.listeCase
-        for c in range (8) :
+        for a in range (8) :
             print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-"))
             for b in range((8//8)):
                  print(f"| {liste[c]}   | {liste[c+1]}   | {liste[c+2]}   | {liste[c+3]}   | {liste[c+4]}   | {liste[c+5]}   | {liste[c+6]}   | {liste[c+7]}  |" )
                  #pour itérer à travers les 64 cases
-                 c+=1
+                 c+=8
 
 
         game = np.array(self.listeCase)
