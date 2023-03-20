@@ -64,4 +64,4 @@ class Board:
 
 
         game = np.array(self.listeCase)
-        return print(game)
+        #return print(game)
