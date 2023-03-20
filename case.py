@@ -1,9 +1,9 @@
 class Case:
 
-    def __init__(self, position, isPlayable, isFree) -> None:
+    def __init__(self, position, isPlayable=False, isFree=True) -> None:
         self.position = position
-        self.isPlayable = False
-        self.isFree = True
+        self.isPlayable = isPlayable
+        self.isFree = isFree
         self.pion = None
 
     def __str__(self):

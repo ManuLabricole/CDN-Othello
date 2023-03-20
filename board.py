@@ -22,12 +22,13 @@ class Board:
                 )
 
     def initFirstFour(self):
-        positionCase = [(4, 4), (5, 5), (4, 5), (5, 4)]
+        positionCase = [(3, 3), (4, 4), (3, 4), (4, 3)]
         colorPion = ["black", "black", "white", "white"]
 
         for i in range(4):
             case = self.getCase(positionCase[i])
             case.addPion(Pion(colorPion[i]))
+            print(case)
 
     def getCase(self, position):
         # Ici les el sont des objets Case
@@ -55,12 +56,15 @@ class Board:
     def display_game(self):
         c = 0
         liste = self.listeCase
-        for c in range (8) :
-            print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-"))
-            for b in range((8//8)):
-                 print(f"| {liste[c]}   | {liste[c+1]}   | {liste[c+2]}   | {liste[c+3]}   | {liste[c+4]}   | {liste[c+5]}   | {liste[c+6]}   | {liste[c+7]}  |" )
-                 c+=1
+        
+        for c in range(0,64,8):
+            
+            print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "+"))
+            print(f"| {liste[c]}   | {liste[c+1]}   | {liste[c+2]}   | {liste[c+3]}   | {liste[c+4]}   | {liste[c+5]}   | {liste[c+6]}   | {liste[c+7]}  |" )
 
+        
+        
+        print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "+"))
 
-        game = np.array(self.listeCase)
-        return print(game)
+        #game = np.array(self.listeCase)
+        print(liste)
