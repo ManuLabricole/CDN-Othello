@@ -1,5 +1,5 @@
 from case import Case
-#from pion import pion
+from pion import Pion
 #from joueur import joueur
 #from game import game
 import numpy as np
@@ -12,12 +12,22 @@ class Board:
         self.listCaseJouable = list()
         self.set_case_jouable()
         self.initCase()
+        self.initFirstFour()
 
     def initCase(self):
         for i in range(8):
             for j in range(8):
                 self.listeCase.append(
-                    Case(position=(i, j), isFree=True, isPlayable=False))
+                    Case(position=(i, j), isFree=True, isPlayable=False)
+                )
+
+    def initFirstFour(self):
+        positionCase = [(4, 4), (5, 5), (4, 5), (5, 4)]
+        colorPion = ["black", "black", "white", "white"]
+
+        for i in range(4):
+            case = self.getCase(positionCase[i])
+            case.addPion(Pion(colorPion[i]))
 
     def getCase(self, position):
         # Ici les el sont des objets Case
@@ -27,9 +37,9 @@ class Board:
         for el in self.listeCase:
             if el.isInPosition(position) == True:
                 return el
-            
+
     def getChoice():
-        #Input from joueur
+        # Input from joueur
         pass
 
     def get_case_jouable(self):
