@@ -32,7 +32,7 @@ class Case:
     def isInPosition(self, positionSent):
 
         if self.position == positionSent:
-            print(f"I m the case {self} at position : {self.position}")
+            #print(f"I m the case {self} at position : {self.position}")
             return True
         else:
             return False

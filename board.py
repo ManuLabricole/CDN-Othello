@@ -38,10 +38,8 @@ class Board:
         for el in self.listeCase:
             if el.isInPosition(position) == True:
                 return el
-
-    def getChoice():
-        # Input from joueur
-        pass
+        
+        return None
 
     def get_case_jouable(self):
         listCaseJouable = list()

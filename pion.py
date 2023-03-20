@@ -8,7 +8,7 @@ class Pion:
         else:
             raise ValueError(
                 "Try again : Les jetons sont soit blancs, soit noirs")
-        print(f"pion {couleur}")
+        #print(f"pion {couleur}")
         # if isinstance(coordonnee, tuple):
         #    self.coordonnee = coordonnee
         # else:
