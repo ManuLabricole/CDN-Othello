@@ -36,9 +36,3 @@ class Case:
             return True
         else:
             return False
-
-    def isPlayable(self, currentCaseList, joueurColor):
-
-        x=self.position[0]
-        y=self.position[1]
-        
