@@ -10,7 +10,9 @@ class Case:
 
     def __str__(self):
         if self.isFree:
-            return "F"
+            return "Free"
+        else:
+            return "Not FREE"
 
     def __repr__(self) -> str:
         if self.isFree:
@@ -23,6 +25,13 @@ class Case:
     def addPion(self, pion):
         self.isFree = False
         self.pion = pion
+        
+    def isInPosition(self, positionSent):
+        
+        if self.position == positionSent:
+            print(f"I m the case {self} at position : {self.position}")
+            return True
+        else:return False
         
     def getCase(self, position):
         if position == self.position:

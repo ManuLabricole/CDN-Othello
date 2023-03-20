@@ -27,4 +27,5 @@ class Game:
 
 
 game = Game()
-case = game.turn()
+game.board.getCase((4,4)).isFree = False
+case = game.board.getCase((4,4)).isFree
