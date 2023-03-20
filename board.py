@@ -13,11 +13,20 @@ class Board:
         self.set_case_jouable()
         self.initCase()
 
-    def initCase (self):
+    def initCase(self):
         for i in range(8):
             for j in range(8):
-                self.listeCase.append(Case(position=(i,j), isFree=True, isPlayable=False))
+                self.listeCase.append(
+                    Case(position=(i, j), isFree=True, isPlayable=False))
 
+    def getCase(self, position):
+        # Ici les el sont des objets Case
+        # Pour chaque case on appelle la methode isInPosition
+        # Cette methode des cases return True si les coordonnees envoyees sont celles de la case
+        # Des qu on recoit un True on a trouve la case et on la renvoit
+        for el in self.listeCase:
+            if el.isInPosition(position) == True:
+                return el
 
     def get_case_jouable(self):
         listCaseJouable = list()

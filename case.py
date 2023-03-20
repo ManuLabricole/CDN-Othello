@@ -4,7 +4,7 @@ class Case:
         self.position = position
         self.isPlayable = False
         self.isFree = True
-        self.Pion = None
+        self.pion = None
         self.initFirstFour()
         
 
