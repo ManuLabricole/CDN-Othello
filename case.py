@@ -24,6 +24,12 @@ class Case:
         self.isFree = False
         self.pion = pion
         
+    def getCase(self, position):
+        if position == self.position:
+            return self
+        else:
+            print("case doesn t exist")
+        
     def initFirstFour(self):
         if int(self.position[0]) == 5:
             print(self.position[0])

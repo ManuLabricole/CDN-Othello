@@ -11,15 +11,9 @@ class Game:
         
     def initGame(self):
         self.board = Board()  
-        
-    def printGame(self):
-        
-        
-        ligne1 = [el for el in self.board.listeCase if el.position[0] == 1]
-        print(ligne1)
+    
         
 
 
 game = Game()
-print(game.board.listeCase)
-#game.board.display_game()
+game.board.display_game()
