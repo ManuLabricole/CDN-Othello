@@ -22,12 +22,13 @@ class Board:
                 )
 
     def initFirstFour(self):
-        positionCase = [(4, 4), (5, 5), (4, 5), (5, 4)]
+        positionCase = [(3, 3), (4, 4), (3, 4), (4, 3)]
         colorPion = ["black", "black", "white", "white"]
 
         for i in range(4):
             case = self.getCase(positionCase[i])
             case.addPion(Pion(colorPion[i]))
+            print(case)
 
     def getCase(self, position):
         # Ici les el sont des objets Case
