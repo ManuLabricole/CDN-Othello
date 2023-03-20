@@ -49,6 +49,8 @@ class Game:
             isValid = self.validateChoice(positionPlayed)
         print("Turn finished !! ")
     
+        
+    
 
     def turn(self):
         

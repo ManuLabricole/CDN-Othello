@@ -18,8 +18,7 @@ class Board:
         for i in range(8):
             for j in range(8):
                 self.listeCase.append(
-                    Case(position=(i, j), isFree=True, isPlayable=False)
-                )
+                    Case(position=(i, j), isFree=True, isPlayable=False))
 
     def initFirstFour(self):
         positionCase = [(3, 3), (4, 4), (3, 4), (4, 3)]
