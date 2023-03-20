@@ -52,6 +52,10 @@ class Game:
             positionPlayed = input("Please; insert valid inputs : ")
             isValid = self.validateChoice(positionPlayed)
         print("Turn finished !! ")
+        
+        return (int(positionPlayed[0]),int(positionPlayed[1]))
+    
+        
     
 
     def turn(self):
