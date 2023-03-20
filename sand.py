@@ -1,4 +1,5 @@
 
+from sqlalchemy import false
 from game import Game
 from pion import Pion
 
@@ -7,21 +8,27 @@ game = Game()
 game.board.display_game()
 
 
-joueurCouleur="black"
-case43=game.board.getCase((5,5))
-case43.addPion(Pion(joueurCouleur))
+joueurCouleur = "black"
 game.board.display_game()
 
-caseList = game.board.listeCase
-case11 = game.board.getCase((1,1))
-print(case11)
-case11.addPion(Pion(joueurCouleur))
-print(case11)
+# getChoice send a tupple
+# This tupple get a Case if valid; otherwise ask an other tupple
+isPlayable = False
+while isPlayable == False:
+    choice = game.getChoice()
+    isPlayable = game.board.isChoicePlayable(
+        choice=choice, joueurColor=joueurCouleur)
+    game.board.display_game()
+    print(isPlayable)
+game.board.getCase(choice).addPion(Pion(joueurCouleur))
 game.board.display_game()
+# Here we need to first check if the target has the right neigbours before adding pion"
+
+# target.addPion(Pion(joueurCouleur))
 
 choice = game.getChoice()
 target = game.board.getCase(choice)
 target.addPion(Pion(joueurCouleur))
 game.partie()
 #isValid = game.board.isChoicePlayable(choice=choice, joueurColor=joueurCouleur)
-#print(isValid)
+# print(isValid)

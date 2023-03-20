@@ -49,21 +49,30 @@ class Board:
         else:
             oppositeColor = "black"
 
+        print(oppositeColor)
         x = choice[0]
         y = choice[1]
 
         cases = [
-            self.getCase(x, y-1),
-            self.getCase(x, y+1),
-            self.getCase(x-1, y),
-            self.getCase(x+1, y)
+            self.getCase((x, y-1)),
+            self.getCase((x, y+1)),
+            self.getCase((x-1, y)),
+            self.getCase((x+1, y)),
+            self.getCase((x+1,y+1)),
+            self.getCase((x-1,y-1)),
+            self.getCase((x+1,y-1)),
+            self.getCase((x-1,y+1))
+            
         ]
 
         for case in cases:
+            print(f"{case.pion}")
             if case is not None:
-                if case.pion.couleur == oppositeColor:
-                    return True
-
+                if case.isFree == False:
+                    if case.pion.couleur == oppositeColor:
+                        print(f"the case {case.position} is {case.pion.couleur}")
+                        return True
+                    
         print("Apparently your choice is not valid, please place your pion around a neighbours")
         return False
 
