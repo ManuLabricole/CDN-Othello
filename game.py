@@ -1,7 +1,7 @@
 from case import Case
 from board import Board
 from pion import Pion
-
+from joueur import Joueur
 
 class Game:
 
@@ -9,6 +9,8 @@ class Game:
         self.board = None
         self.initGame()
         self.gameOn = True
+        self.getPlayers()
+
 
     def initGame(self):
         self.board = Board()
@@ -39,13 +41,15 @@ class Game:
                 return False
         elif (len(choice)> 2):
             print("To many numbers, Please insert a valid input :")
+        elif (len(choice)< 2) :
+            print("Please insert two numbers : ")
             return False
         
     def getChoice(self):
-        positionPlayed = input("Enter the 2 digits corresponding to the coordinate of your choice :")
+        positionPlayed = input("Enter the 2 digits corresponding to the coordinate of your choice : ")
         isValid = self.validateChoice(positionPlayed)
         while isValid == False:
-            positionPlayed = input("Please; insert valid inputs")
+            positionPlayed = input("Please; insert valid inputs : ")
             isValid = self.validateChoice(positionPlayed)
         print("Turn finished !! ")
         
@@ -55,10 +59,12 @@ class Game:
     
 
     def turn(self):
-        
         choice = self.getChoice()
 
-    
+    def getPlayers(self):
+        joueur_1 = Joueur(input("Hi player 1 what is your name ? : "), input("black or white ? : ") )
+        joueur_2 = Joueur(input("Hi player 2 what is your name ? : "), input("black or white ? : ") )
+        return joueur_1, joueur_2    
 
     def checkAfterTurn(self):
         pass

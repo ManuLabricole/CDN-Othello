@@ -15,6 +15,9 @@ class Joueur:
 
 #canPlay est une fonction qui a défini si le joueur pouvait jouer
 
+    #def play(self):
+        #if canPlay  
+
     def play(self):
         if canPlay :
             choixCaseJouee =input("Où souhaitez-vous jouer votre pion ? Indiquer (i, j)")
