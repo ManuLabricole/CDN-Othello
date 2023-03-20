@@ -9,15 +9,18 @@ class Case:
 
     def __str__(self):
         if self.isFree:
-            return "Free"
+            return " "
         else:
-            return "Not FREE"
+            if self.pion.couleur == "black":
+                return "X"
+            else:
+                return "O"
 
     def __repr__(self) -> str:
         if self.isFree:
             return "F"
         else:
-            return self.pion.couleur
+            return self.pion
 
     # La function addPion doit recevoir en input un OBJET de class Pion
     def addPion(self, pion):
