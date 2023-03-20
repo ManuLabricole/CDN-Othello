@@ -54,12 +54,14 @@ class Board:
     def display_game(self):
         c = 0
         liste = self.listeCase
-        
-        for c in range(0,64,8):
+        #J'ai remis range 8 pour pouvoir énumérer les lignes déso
+        for a in range (8) :
             
-            print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "+"))
-            print(f"| {liste[c]}   | {liste[c+1]}   | {liste[c+2]}   | {liste[c+3]}   | {liste[c+4]}   | {liste[c+5]}   | {liste[c+6]}   | {liste[c+7]}  |" )
+            print (f"{a} +---+---+---+---+---+---+---+---")
+            print(f"  | {liste[c]} | {liste[c+1]} | {liste[c+2]} | {liste[c+3]} | {liste[c+4]} | {liste[c+5]} | {liste[c+6]} | {liste[c+7]} |" )
+                 #pour itérer à travers les 64 cases
+            c+=8
 
-        
-        
-        print (("+" + '----' + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "-" + "+" + "----" + "+"))
+
+        game = np.array(self.listeCase)
+        return print(game)
