@@ -22,3 +22,4 @@ def ligne (longueur, largeur) :
 
 
 ligne(8,8)
+bl
